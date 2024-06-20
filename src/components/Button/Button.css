@@ -1,0 +1,8 @@
+.primaryBtn {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 19px 25px;
+  border: none;
+  border-radius: 12px;
+  max-width: 170px;
+}

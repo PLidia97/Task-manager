@@ -1,3 +1,4 @@
+import CreateTaskForm from "../CreateTaskForm/CreateTaskForm";
 import TaskCard from "../TaskCard/TaskCard";
 import "./ContainerBox.css";
 
@@ -20,6 +21,7 @@ const ContainerBox = () => {
           date="04/12/2024"
         />
       </div>
+      <CreateTaskForm />
     </div>
   );
 };

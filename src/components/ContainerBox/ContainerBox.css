@@ -3,7 +3,8 @@
   background: #f3f3fb;
   padding: 70px 44px;
   margin: 20px 30px;
-  height: calc(100vh - (140px + 40px)); /*am scazut marginea si paddingul*/
+  min-height: calc(100vh - 40px); /*am scazut marginea si paddingul*/
+  box-sizing: border-box;
 }
 
 .container-box h1,

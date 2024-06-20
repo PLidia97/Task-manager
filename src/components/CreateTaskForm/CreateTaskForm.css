@@ -1,0 +1,30 @@
+.createTaskForm {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.createTaskForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.createTaskForm input {
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.createTaskForm label {
+  margin-bottom: 14px;
+}
+
+.createTaskForm textarea {
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 12px;
+  resize: none;
+  height: 120px;
+}
