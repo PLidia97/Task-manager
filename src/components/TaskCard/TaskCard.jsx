@@ -7,7 +7,7 @@ const TaskCard = (props) => {
   return (
     <div className="taskContainer">
       <div className="top">
-        <p className="type">{props.type}</p>
+        <p className="type">{props.name}</p>
         <p className="status">{props.status}</p>
       </div>
       <div className="content">{props.desc}</div>
