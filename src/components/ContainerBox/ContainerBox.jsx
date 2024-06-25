@@ -3,6 +3,7 @@ import CreateTaskForm from "../CreateTaskForm/CreateTaskForm";
 import TaskCard from "../TaskCard/TaskCard";
 import "./ContainerBox.css";
 import NoTasks from "../NoTasks/NoTasks";
+import Modal from "../Modal/Modal";
 
 const ContainerBox = () => {
   const [taskList, setTaskList] = useState([]);
@@ -40,7 +41,11 @@ const ContainerBox = () => {
       ) : (
         <NoTasks />
       )}
-      <CreateTaskForm addTask={onAddTask} />
+
+      {/* <Modal  /> */}
+      <Modal isOpen={true}>
+        <CreateTaskForm addTask={onAddTask} />
+      </Modal>
     </div>
   );
 };
