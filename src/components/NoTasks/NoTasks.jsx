@@ -3,7 +3,7 @@ import "./NoTasks.css";
 import Button from "../Button/Button";
 import noTasksImg from "../../assets/NoTasks.svg";
 
-const NoTasks = () => {
+const NoTasks = (props) => {
   return (
     <div className="noTasks">
       <img src="/images/NoTasks.svg" alt="" />
@@ -11,7 +11,7 @@ const NoTasks = () => {
       <h2>No Tasks Yet</h2>
       <p>You have no task created in your workspace yet.</p>
       <p>Get productive. Create a Task Now.</p>
-      <Button text="Create a Task" />
+      <Button text="Create a Task" onClickFunction={props.onClickFunction} />
     </div>
   );
 };

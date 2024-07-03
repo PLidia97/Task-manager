@@ -1,3 +1,4 @@
+import Badge from "../Badge/Badge";
 import "./TaskCard.css";
 
 const TaskCard = (props) => {
@@ -8,7 +9,7 @@ const TaskCard = (props) => {
     <div className="taskContainer">
       <div className="top">
         <p className="type">{props.name}</p>
-        <p className="status">{props.status}</p>
+        <Badge status={props.status} />
       </div>
       <div className="content">{props.desc}</div>
       <div className="bottom">

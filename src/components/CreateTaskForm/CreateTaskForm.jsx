@@ -53,6 +53,9 @@ const CreateTaskForm = (props) => {
     // props.addTask(newTask);
     props.addTask(taskData);
     resetState();
+    if (props.closeModal) {
+      props.closeModal();
+    }
   };
 
   return (
