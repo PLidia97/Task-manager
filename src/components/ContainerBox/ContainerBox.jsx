@@ -7,7 +7,37 @@ import Modal from "../Modal/Modal";
 import ControlPanel from "../ControlPanel/ControlPanel";
 
 const ContainerBox = () => {
-  const [taskList, setTaskList] = useState([]);
+  const data = [
+    {
+      taskName: "task1",
+      taskDate: "12-12-2024",
+      taskDescription: "desc1",
+      taskStatus: "Todo",
+    },
+
+    {
+      taskName: "task2",
+      taskDate: "12-12-2024",
+      taskDescription: "desc2",
+      taskStatus: "Pending",
+    },
+
+    {
+      taskName: "task3",
+      taskDate: "12-12-2024",
+      taskDescription: "desc3",
+      taskStatus: "In Progress",
+    },
+
+    {
+      taskName: "task4",
+      taskDate: "12-12-2024",
+      taskDescription: "desc4",
+      taskStatus: "Completed",
+    },
+  ];
+
+  const [taskList, setTaskList] = useState(data);
   const [isEmOpen, setIsEmOpen] = useState(false);
 
   const openModal = () => setIsEmOpen(true);

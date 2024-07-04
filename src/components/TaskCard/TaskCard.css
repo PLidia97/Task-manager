@@ -28,15 +28,6 @@
   letter-spacing: -0.28px;
 }
 
-.taskContainer .status {
-  background-color: #f2f2f2;
-  padding: 4px 10px;
-  border-radius: 12px;
-  color: #808080;
-  font-size: 12px;
-  letter-spacing: -0.24px;
-}
-
 .taskContainer .content {
   color: var(--accent-stm-dark-mode-bg);
   font-size: 14px;
