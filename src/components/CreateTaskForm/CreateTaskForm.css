@@ -28,3 +28,12 @@
   resize: none;
   height: 120px;
 }
+
+.createTaskForm .inputError {
+  border-color: red;
+}
+
+.createTaskForm .error-message {
+  font-size: 12px;
+  color: red;
+}

@@ -8,7 +8,7 @@ const Badge = (props) => {
         return "grey";
       case "In Progress":
         return "blue";
-      case "Pendding":
+      case "Pending":
         return "yellow";
       case "Completed":
         return "green";
