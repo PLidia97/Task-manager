@@ -6,10 +6,11 @@ import NoTasks from "../NoTasks/NoTasks";
 import Modal from "../Modal/Modal";
 import ControlPanel from "../ControlPanel/ControlPanel";
 import { useTaskContext } from "../../context/TaskContext";
+import { v4 as uuidv4 } from "uuid";
 
 const ContainerBox = () => {
   const [isEmOpen, setIsEmOpen] = useState(false);
-  const { taskList, setTaskList } = useTaskContext();
+  const { taskList, setTaskList, selectedStatus } = useTaskContext();
   const openModal = () => setIsEmOpen(true);
 
   const closeModal = () => setIsEmOpen(false);
@@ -18,6 +19,7 @@ const ContainerBox = () => {
     setTaskList([
       ...taskList,
       {
+        id: uuidv4(),
         taskName: task.name,
         taskDate: task.date,
         taskDesc: task.desc,
@@ -26,12 +28,22 @@ const ContainerBox = () => {
       },
     ]);
   };
-  console.log(taskList);
+  // console.log(taskList);
 
+  const setFilteredTasks = () => {
+    if (selectedStatus === "All Tasks") {
+      return taskList;
+    }
+    const filterList = taskList.filter(
+      (task) => task.taskStatus === selectedStatus
+    );
+    return filterList;
+  };
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(taskList));
   }, [taskList]);
 
+  const filteredTasks = setFilteredTasks();
   // const contextData = useTaskContext();
   // console.log(contextData);
   return (
@@ -41,12 +53,14 @@ const ContainerBox = () => {
       {/* {randare conditionala} */}
       {taskList.length > 0 ? (
         <div className="tasks">
-          {taskList.map((task, index) => (
+          {filteredTasks.map((task, index) => (
             <TaskCard
               name={task.taskName}
               status={task.taskStatus}
               desc={task.taskDesc}
               date={task.taskDate}
+              id={task.id}
+              //task = {task}
               key={index}
             />
           ))}
