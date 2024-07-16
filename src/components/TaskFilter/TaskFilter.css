@@ -1,0 +1,16 @@
+.filter-item.active {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.filter-item:hover {
+  cursor: pointer;
+}
+
+.content-filter {
+  display: flex;
+  letter-spacing: -2%;
+  color: #808080;
+  gap: 28px;
+  margin: 22px 40px;
+}
